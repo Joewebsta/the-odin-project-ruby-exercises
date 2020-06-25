@@ -16,7 +16,7 @@ def exceeds_z?(byte, shifted_byte)
   end 
 end
 
-def caesar_cipher(string, shift)
+def shiftChars(string, shift)
   bytes = string.bytes
   shift > 25 ? shift = remove_shift_cycles(shift) : shift
 
@@ -29,7 +29,15 @@ def caesar_cipher(string, shift)
     end
   end
 
-  p shifted_bytes.join()
+  shifted_bytes.join()
 end
 
-caesar_cipher("What a string!", 5)
+def caesar_cipher(string, shift)
+  shiftChars(string, shift)
+end
+
+p caesar_cipher("What a string!", 5)
+p caesar_cipher("ABC", 132)
+p caesar_cipher("XYZ", 10)
+p caesar_cipher("X   Y    Z", 77)
+p caesar_cipher("X&(&$^Y{{}}!Z", 18)

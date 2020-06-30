@@ -12,7 +12,6 @@ def bubble_sort(arr)
       arr[i+1] = num1
       sortCount += 1
     end
-    arr
   end
 
   if sortCount == 0
@@ -24,4 +23,4 @@ def bubble_sort(arr)
 end
 
 p bubble_sort([0,2,2,3,4,78])
-p bubble_sort([4,3,78,2,0,2,39,11,21,13,77,97,51])
+p bubble_sort([4,3,78,2,0,2,39,11,21,13,77,1,97,51])

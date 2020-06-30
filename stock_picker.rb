@@ -1,5 +1,3 @@
-require 'pry'
-
 def stock_picker(prices)
   profit  = 0
   low_idx = 0
@@ -20,7 +18,7 @@ def stock_picker(prices)
   end
   
   if (prices[high_idx] == prices[low_idx])
-    p "Do not sell! Wait for a better selling opportunity."
+    p "There were no profitable buying opportunities during the provided time period."
   else
     p [low_idx, high_idx]
     p "# for a profit of $#{prices[high_idx]} - $#{prices[low_idx]} = $#{prices[high_idx] - prices[low_idx]}"
